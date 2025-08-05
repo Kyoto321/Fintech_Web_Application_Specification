@@ -33,8 +33,9 @@ SECRET_KEY = 'django-insecure-l-k%)-3+0w!(+j3$yry0(7r^-)3v#ab33u5k2#m6c%(gkfo!%7
 
 JWT_SECRET = "codingisgreat"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
+DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 ALLOWED_HOSTS = []
 
 
@@ -160,9 +161,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "auth_user.User"
 LOGIN_REDIRECT_URL = 'index'
-
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
 
 PAGE_SIZE = 5
 
