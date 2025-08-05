@@ -36,7 +36,7 @@ JWT_SECRET = "codingisgreat"
 #DEBUG = True
 
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fintech-web-application-specification.onrender.com']
 
 
 # Application definition
